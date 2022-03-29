@@ -6,13 +6,14 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">Header</header>
+
+        <main className="App-main">
+          <Dictionary />
+        </main>
+        <footer className="App-footer">
+          <small>Coded by Romina</small>
+        </footer>
       </div>
-      <main className="App-main">
-        <Dictionary />
-      </main>
-      <footer className="App-footer">
-        <small>Coded by Romina</small>
-      </footer>
     </div>
   );
 }
