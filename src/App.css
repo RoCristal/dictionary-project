@@ -17,4 +17,12 @@
 
 .App-footer {
   background-color: #7f2736;
+  color: rgb(224, 228, 228);
+}
+
+a {
+  color: rgb(224, 228, 228);
+}
+a:hover {
+  color: #f0c53e;
 }
