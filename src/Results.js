@@ -4,6 +4,7 @@ import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 
 export default function Results(props) {
+  //console.log(props.data);
   if (props.data) {
     return (
       <div className="results">
@@ -11,13 +12,10 @@ export default function Results(props) {
           <h2>
             <strong>{props.data.word}</strong>
           </h2>
-          {props.data.phonetics.map(function (phonetic, index) {
-            return (
-              <div className="phonetic" index={index}>
-                <Phonetic phonetic={phonetic} />
-              </div>
-            );
-          })}
+
+          <span className="phonetic">
+            <Phonetic phonetic={props.data} />
+          </span>
 
           {props.data.meanings.map(function (meaning, index) {
             return (

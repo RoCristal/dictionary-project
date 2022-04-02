@@ -9,13 +9,13 @@ export default function Meaning(props) {
       <h3>{props.meaning.partOfSpeech}</h3>
 
       {props.meaning.definitions.map(function (definition, index) {
-        if (index) {
+        if (index < 2) {
           return (
             <div key={index} className="definitions">
               <strong>Definition: </strong>
               {definition.definition}
               <Examples examples={definition} />
-              <Synonyms synonyms={props.meaning.synonyms} />
+              <Synonyms synonyms={definition.synonyms} />
               <br />
             </div>
           );
