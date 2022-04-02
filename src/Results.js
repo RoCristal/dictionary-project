@@ -4,7 +4,6 @@ import Meaning from "./Meaning";
 
 export default function Results(props) {
   if (props.data) {
-    console.log(props.data.meanings[0].definitions[0].definition);
     return (
       <div className="results">
         <div className="meaning">
