@@ -1,6 +1,6 @@
 h2 {
   text-transform: capitalize;
-  line-height: 1.5;
+  line-height: 3;
 }
 h3 {
   text-transform: capitalize;
@@ -8,8 +8,4 @@ h3 {
 .definitions {
   text-align: start;
   font-size: 18px;
-}
-
-.phonetic {
-  font-size: 20px;
 }
