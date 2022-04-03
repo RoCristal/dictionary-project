@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
-  let [photos, setPhotos] = useState(null);
 
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
   }
 
   function handlePexelResponse(response) {
-    setPhotos(response.data.photos);
+    console.log(response);
   }
 
   function search(event) {
@@ -23,9 +21,8 @@ export default function Dictionary() {
     axios.get(apiUrl).then(handleDictionaryResponse);
 
     let pexelsKey = `563492ad6f91700001000001172fb845e28d410db987822a67b91cc9`;
-    const headers = { Authorization: `Bearer ${pexelsKey}` };
-    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=5`;
-    axios.get(pexelsUrl, { headers: headers }).then(handlePexelResponse);
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=nature&per_page=1`;
+    axios.get(pexelsUrl).then(handlePexelResponse);
   }
 
   function wordChange(event) {
@@ -43,7 +40,6 @@ export default function Dictionary() {
         />
       </form>
       <Results data={results} />
-      <Photos photos={photos} />
     </div>
   );
 }
