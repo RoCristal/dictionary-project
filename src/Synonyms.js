@@ -8,12 +8,14 @@ export default function Synonyms(props) {
     return (
       <div>
         {props.synonyms.map(function (synonym, index) {
-          return (
-            <span className="synonym" key={index}>
-              {" "}
-              {synonym}{" "}
-            </span>
-          );
+          if (index < 3) {
+            return (
+              <span className="synonym" key={index}>
+                {" "}
+                {synonym}{" "}
+              </span>
+            );
+          }
         })}
       </div>
     );
