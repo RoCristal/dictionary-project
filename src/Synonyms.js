@@ -15,6 +15,8 @@ export default function Synonyms(props) {
                 {synonym}{" "}
               </span>
             );
+          } else {
+            return null;
           }
         })}
       </div>
