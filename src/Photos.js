@@ -1,15 +1,24 @@
 import React from "react";
+import "./Photos.css";
 
 export default function Photos(props) {
-  console.log(props);
   if (props.photos) {
     return (
       <div className="Photos">
-        {props.photos.map(function (photo, index) {
-          return (
-            <img src={photo.src.tiny} key={index} alt="graphic description" />
-          );
-        })}
+        <div className="row">
+          <div className="col ">
+            {" "}
+            {props.photos.map(function (photo, index) {
+              return (
+                <img
+                  src={photo.src.tiny}
+                  key={index}
+                  alt="graphic description"
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
     );
   } else {

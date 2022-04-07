@@ -1,8 +1,35 @@
 .btn {
-  font-size: larger;
-  padding: 0;
-  border: 0;
-  margin: 5px;
-  position: relative;
-  top: -5px;
+  padding: 0 20px 0 20px;
+
+  border: 1px solid #577483;
+  box-shadow: 0 1px 3px #577483;
+}
+
+.playMe {
+  font-size: 18px;
+}
+
+.icon {
+  max-width: 15px;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(87 116 131 / 25%);
+}
+
+@media (max-width: 576px) {
+  .phoneticText {
+    position: relative;
+    top: -5px;
+    line-height: 1.5;
+  }
+  .phonetic {
+    margin-bottom: 20px;
+  }
+}
+
+.phonetic {
+  margin-bottom: 30px;
 }

@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          Dictionary App with React, work in progress as of April 2022
+          Welcome to my dictionary made in Java Script and React.
         </header>
 
         <main className="App-main">

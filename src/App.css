@@ -1,28 +1,57 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
   max-width: 800px;
   display: block;
   margin: 0 auto;
+  line-height: 2;
 }
 
 .App-header {
   padding: 30px;
-  background-color: #f0c53e;
+  background-color: #7a9eb1;
+  border-radius: 50%/ 0 0 200px 200px;
+  box-shadow: 0 3px 5px #577483;
 }
 
 .App-main {
   padding: 30px;
-  background-color: rgb(224, 228, 228);
 }
 
 .App-footer {
-  background-color: #7f2736;
-  color: rgb(224, 228, 228);
+  background-color: #415865;
+  color: #ffe1b6;
+  border-radius: 50%/ 200px 200px 0 0;
 }
 
 a {
-  color: rgb(224, 228, 228);
+  color: #ffe1b6;
 }
 a:hover {
   color: #f0c53e;
+}
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 576px) {
+  footer {
+    font-size: 15px;
+  }
 }

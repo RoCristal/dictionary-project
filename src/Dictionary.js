@@ -24,7 +24,7 @@ export default function Dictionary() {
 
     let pexelsKey = `563492ad6f91700001000001172fb845e28d410db987822a67b91cc9`;
     const headers = { Authorization: `Bearer ${pexelsKey}` };
-    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=5`;
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     axios.get(pexelsUrl, { headers: headers }).then(handlePexelResponse);
   }
 
@@ -38,8 +38,8 @@ export default function Dictionary() {
         <input
           type="search"
           onChange={wordChange}
-          className="rounded"
-          placeholder="Search for a word"
+          className="searchField"
+          placeholder=" Search for a word"
         />
       </form>
       <Results data={results} />
