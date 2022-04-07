@@ -32,18 +32,34 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="dictionary">
-      <form onSubmit={search}>
-        <input
-          type="search"
-          onChange={wordChange}
-          className="searchField"
-          placeholder=" Search for a word"
-        />
-      </form>
-      <Results data={results} />
-      <Photos photos={photos} />
-    </div>
-  );
+  if (results) {
+    return (
+      <div className="dictionary">
+        <form onSubmit={search}>
+          <input
+            type="search"
+            onChange={wordChange}
+            className="searchField"
+            placeholder=" Search for a word"
+          />
+        </form>
+        <Results data={results} />
+        <Photos photos={photos} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="dictionary">
+        <form onSubmit={search}>
+          <input
+            type="search"
+            onChange={wordChange}
+            className="searchField"
+            placeholder=" Search for a word"
+          />
+        </form>
+        <Photos photos={photos} />
+      </div>
+    );
+  }
 }
