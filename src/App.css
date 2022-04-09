@@ -16,6 +16,14 @@
 .App-main {
   padding: 30px;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wrapper {
+  flex: 1;
+}
 
 footer {
   background-color: #415865;
