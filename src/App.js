@@ -23,6 +23,7 @@ export default function App() {
             </a>
           </small>
         </footer>
+        <footer> </footer>
       </div>
     </div>
   );
