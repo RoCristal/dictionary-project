@@ -9,3 +9,8 @@ input.searchField {
   outline: #ffe1b6;
   box-shadow: 3px 3px 6px #7a9eb1;
 }
+
+.btn{
+  border: 2px solid #d6b048;
+  margin: 10px;
+}

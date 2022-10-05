@@ -57,6 +57,7 @@ export default function Dictionary() {
             className="searchField"
             placeholder=" Search for a word"
           />
+          <button type="button" className="btn" onClick={search}>Search</button>
         </form>
         <Photos photos={photos} />
       </div>
